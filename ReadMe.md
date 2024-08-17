@@ -66,68 +66,60 @@
 <br/>
 <br/>
 
-# Fire and gas detection alarm system
+# Fire and Gas Detection Alarm System
 
-This project implements a system that uses Arduino to detect fire and gas and generate alarms.
+This project implements a fire and gas detection system with alarm functionality using Arduino.
 
 ## Table of Contents
-
-1. [System Overview] (#System-Overview)
-2. [Function] (#Function)
-3. [Hardware Configuration] (#Hardware-Configuration)
-4. [Software Configuration] (#Software-Configuration)
-5. [Installation and Use] (#Install-and-Use-Method)
-6. [Caution] (#Caution)
+1. [System Overview](#system-overview)
+2. [Features](#features)
+3. [Hardware Components](#hardware-components)
+4. [Software Components](#software-components)
+5. [Installation and Usage](#installation-and-usage)
+6. [Precautions](#precautions)
 
 ## System Overview
+This system uses a flame sensor and an MQ-2 gas sensor to detect fire and harmful gases. In case of a hazardous situation, it provides visual warnings through an RGB LED and auditory warnings via a piezo buzzer, while also notifying through the serial monitor.
 
-The system uses flame sensors and MQ-2 gas sensors to detect fire and harmful gases. It provides visual and audible warnings through RGB LED and piezo buzzers in the event of a hazardous situation, and notifies the situation through a serial monitor.
+## Features
+1. **Fire Detection**
+   - Outputs "Fire Detective!" message when a flame is detected
+   - Turns on red LED and triggers alarm sound
+   - Outputs "Fire OFF" message and deactivates alarm when fire is no longer detected
+2. **Gas Detection**
+   - Outputs "Gas Detective" message when harmful gas is detected
+   - Turns on yellow LED and triggers alarm sound
+   - Outputs "Gas OFF" message and deactivates alarm when gas is no longer detected
 
-## function
-
-1. **Fire detection**
-   - Output "Fire Detective!" message when flame is detected
-   - Red LED on and warning sound generated
-   - Output "Fire OFF" message and release warning at fire end
-
-2. **Gas detection**
-   - Output "Gas Detective" message when hazardous gas is detected
-   - Amber LED on and warning sound generated
-   - Release the "Gas OFF" message and release the warning at the end of the gas detection
-
-## Hardware Configuration
-
+## Hardware Components
 - Arduino Mega
-- Flame detection sensor
-- MQ-2 Gas Sensor
+- Flame sensor
+- MQ-2 gas sensor
 - RGB LED
-- Piezo Boozer
+- Piezo buzzer
 
-## Software Configuration
-
-- Programming with Arduino IDE
-- Key Technologies:
-  - RGB LED Control
+## Software Components
+- Programming using Arduino IDE
+- Key technologies:
+  - RGB LED control
   - Piezo buzzer output control
-  - Read flame detection sensor and gas sensor data
+  - Reading data from flame sensor and gas sensor
   - Serial communication
-  - Output control based on sensor input
+  - Output control based on sensor inputs
 
-## Installation and Use
-
-1. Installing Arduino IDE
-2. Install the required library (if applicable)
+## Installation and Usage
+1. Install Arduino IDE
+2. Install necessary libraries (if applicable)
 3. Hardware connections:
-   - Connect the flame detection sensor to the digital pin
-   - Connect the MQ-2 sensor to an analog pin
-   - Connect RGB LED to PWM Support Pin
-   - Connect the piezo buzzer to the digital pin
+   - Connect flame sensor to a digital pin
+   - Connect MQ-2 sensor to an analog pin
+   - Connect RGB LED to PWM-enabled pins
+   - Connect piezo buzzer to a digital pin
 4. Upload the provided code to Arduino IDE
-5. Open Serial Monitor (Communication Speed 9600bps)
-6. Check system operation
+5. Open Serial Monitor (communication speed 9600bps)
+6. Verify system operation
 
 ## Precautions
-
-- The system is designed for educational and experimental purposes. Additional verification and certification are required to be used as a real safety system.
-- Sensitivity and alarm thresholds of the sensor may need to be adjusted depending on the environment.
-- Regular sensor inspection and calibration are required.
+- This system is designed for educational and experimental purposes. Additional verification and certification are required for use as an actual safety system.
+- Sensor sensitivity and alarm thresholds may need adjustment depending on the environment.
+- Regular sensor checks and calibration are necessary.

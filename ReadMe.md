@@ -63,4 +63,71 @@
 - 이 시스템은 교육 및 실험 목적으로 설계되었습니다. 실제 안전 시스템으로 사용하기 위해서는 추가적인 검증과 인증이 필요합니다.
 - 센서의 감도와 경보 임계값은 환경에 따라 조정이 필요할 수 있습니다.
 - 정기적인 센서 점검과 캘리브레이션이 필요합니다.
+<br/>
+<br/>
 
+# Fire and gas detection alarm system
+
+This project implements a system that uses Arduino to detect fire and gas and generate alarms.
+
+## Table of Contents
+
+1. [System Overview] (#System-Overview)
+2. [Function] (#Function)
+3. [Hardware Configuration] (#Hardware-Configuration)
+4. [Software Configuration] (#Software-Configuration)
+5. [Installation and Use] (#Install-and-Use-Method)
+6. [Caution] (#Caution)
+
+## System Overview
+
+The system uses flame sensors and MQ-2 gas sensors to detect fire and harmful gases. It provides visual and audible warnings through RGB LED and piezo buzzers in the event of a hazardous situation, and notifies the situation through a serial monitor.
+
+## function
+
+1. **Fire detection**
+   - Output "Fire Detective!" message when flame is detected
+   - Red LED on and warning sound generated
+   - Output "Fire OFF" message and release warning at fire end
+
+2. **Gas detection**
+   - Output "Gas Detective" message when hazardous gas is detected
+   - Amber LED on and warning sound generated
+   - Release the "Gas OFF" message and release the warning at the end of the gas detection
+
+## Hardware Configuration
+
+- Arduino Mega
+- Flame detection sensor
+- MQ-2 Gas Sensor
+- RGB LED
+- Piezo Boozer
+
+## Software Configuration
+
+- Programming with Arduino IDE
+- Key Technologies:
+  - RGB LED Control
+  - Piezo buzzer output control
+  - Read flame detection sensor and gas sensor data
+  - Serial communication
+  - Output control based on sensor input
+
+## Installation and Use
+
+1. Installing Arduino IDE
+2. Install the required library (if applicable)
+3. Hardware connections:
+   - Connect the flame detection sensor to the digital pin
+   - Connect the MQ-2 sensor to an analog pin
+   - Connect RGB LED to PWM Support Pin
+   - Connect the piezo buzzer to the digital pin
+4. Upload the provided code to Arduino IDE
+5. Open Serial Monitor (Communication Speed 9600bps)
+6. Check system operation
+
+## Precautions
+
+- The system is designed for educational and experimental purposes. Additional verification and certification are required to be used as a real safety system.
+- Sensitivity and alarm thresholds of the sensor may need to be adjusted depending on the environment.
+- Regular sensor inspection and calibration are required.
